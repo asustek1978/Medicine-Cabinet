@@ -1,0 +1,14 @@
+{
+  "title": "Home Medicine Cabinet",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Home Medicine Cabinet",
+        "description": "Create the local medicine cabinet? v0.3 reads the medicine catalog from /config/medicine_cabinet/medicine_catalog.sqlite."
+      }
+    },
+    "abort": {
+      "already_configured": "Home Medicine Cabinet is already configured."
+    }
+  }
+}
