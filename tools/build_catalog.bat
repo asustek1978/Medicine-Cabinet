@@ -2,7 +2,7 @@
 setlocal
 cd /d "%~dp0"
 
-echo Home Medicine Cabinet v0.3.4 - build local catalog
+echo Home Medicine Cabinet v0.4.4 - build local catalog
 py -3 convert_rls.py ^
   --rls "C:\ProgramData\ENC2026\DB\rls.sqlite" ^
   --config "C:\ProgramData\ENC2026\DB\rls_config.db" ^

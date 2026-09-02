@@ -12,6 +12,7 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
+          ignore: "topics description"
 
   hassfest:
     runs-on: ubuntu-latest

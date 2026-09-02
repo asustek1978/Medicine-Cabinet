@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+.bootstrap/
+*.zip
+medicine_catalog.sqlite

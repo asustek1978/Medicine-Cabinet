@@ -28,14 +28,6 @@
   <img src="images/desktop.jpg" alt="Medicine Cabinet desktop" width="100%">
 </p>
 
-### Телефон
-
-<p align="center">
-  <img src="images/mobile.jpg" alt="Medicine Cabinet mobile" width="360">
-</p>
-
-> Интерфейс активно развивается, поэтому отдельные элементы на скриншотах могут немного отличаться от текущей версии.
-
 ## 🚀 Возможности
 
 | Возможность | Что делает |

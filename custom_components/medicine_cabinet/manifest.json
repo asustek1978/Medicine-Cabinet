@@ -1,19 +1,19 @@
 {
   "domain": "medicine_cabinet",
   "name": "Домашняя аптечка",
-  "version": "0.4.4",
-  "config_flow": true,
-  "single_config_entry": true,
-  "documentation": "https://github.com/asustek1978/Medicine-Cabinet",
-  "issue_tracker": "https://github.com/asustek1978/Medicine-Cabinet/issues",
   "codeowners": [
     "@asustek1978"
   ],
-  "iot_class": "cloud_polling",
+  "config_flow": true,
   "dependencies": [
-    "http",
     "frontend",
+    "http",
     "panel_custom"
   ],
-  "integration_type": "service"
+  "documentation": "https://github.com/asustek1978/Medicine-Cabinet",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/asustek1978/Medicine-Cabinet/issues",
+  "single_config_entry": true,
+  "version": "0.4.4"
 }
