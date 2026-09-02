@@ -1,0 +1,52 @@
+name: Bug report
+description: Сообщить об ошибке Medicine Cabinet
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение. Не публикуйте токены, пароли, персональные данные или полную локальную базу лекарств.
+  - type: input
+    id: ha_version
+    attributes:
+      label: Версия Home Assistant
+      placeholder: "2026.9.x"
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Версия Medicine Cabinet
+      placeholder: "0.4.4"
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: Способ установки
+      options:
+        - HACS
+        - Вручную
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что произошло?
+      description: Опишите фактическое и ожидаемое поведение.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      placeholder: "1. Открыть ...\n2. Нажать ...\n3. Ошибка ..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Журнал
+      description: Вставьте относящиеся к ошибке строки журнала без секретов и персональных данных.
+      render: text

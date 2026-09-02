@@ -1,0 +1,18 @@
+name: Feature request
+description: Предложить новую функцию
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Что хотите добавить?
+      description: Опишите задачу и ожидаемый результат.
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Сценарий использования
+      description: Где и как эта функция будет использоваться в домашней аптечке?
+    validations:
+      required: true
