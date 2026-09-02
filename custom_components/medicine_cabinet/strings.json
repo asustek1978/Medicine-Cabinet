@@ -1,0 +1,14 @@
+{
+  "title": "Домашняя аптечка",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Домашняя аптечка",
+        "description": "Создать локальную домашнюю аптечку? Справочник v0.3 читается из /config/medicine_cabinet/medicine_catalog.sqlite."
+      }
+    },
+    "abort": {
+      "already_configured": "Домашняя аптечка уже настроена."
+    }
+  }
+}
