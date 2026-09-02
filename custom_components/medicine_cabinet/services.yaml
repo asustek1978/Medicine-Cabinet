@@ -1,0 +1,96 @@
+consume:
+  name: Списать препарат
+  description: Уменьшает остаток выбранной упаковки.
+  fields:
+    package_id:
+      name: ID упаковки
+      required: true
+      selector:
+        text:
+    amount:
+      name: Количество
+      required: true
+      default: 1
+      selector:
+        number:
+          min: 0.01
+          max: 10000
+          step: 0.5
+          mode: box
+    reason:
+      name: Причина
+      required: false
+      default: Принято
+      selector:
+        text:
+
+adjust:
+  name: Скорректировать остаток
+  description: Устанавливает фактический остаток упаковки.
+  fields:
+    package_id:
+      name: ID упаковки
+      required: true
+      selector:
+        text:
+    remaining:
+      name: Новый остаток
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 100000
+          step: 0.5
+          mode: box
+    reason:
+      name: Причина
+      required: false
+      default: Корректировка
+      selector:
+        text:
+
+consume_linked:
+  name: Списать связанное лекарство
+  description: Списывает препарат для Medication Manager по FEFO — сначала из подходящей упаковки с ближайшим сроком годности.
+  fields:
+    package_id:
+      name: ID упаковки-якоря
+      required: false
+      selector:
+        text:
+    gtin:
+      name: GTIN
+      required: false
+      selector:
+        text:
+    name:
+      name: Название
+      required: false
+      selector:
+        text:
+    strength:
+      name: Дозировка
+      required: false
+      selector:
+        text:
+    owner:
+      name: Пациент
+      required: false
+      selector:
+        text:
+    amount:
+      name: Количество
+      required: true
+      default: 1
+      selector:
+        number:
+          min: 0.01
+          max: 10000
+          step: 0.5
+          mode: box
+    reason:
+      name: Причина
+      required: false
+      default: Medication Manager
+      selector:
+        text:
