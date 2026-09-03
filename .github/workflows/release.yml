@@ -30,21 +30,31 @@ jobs:
           set -euo pipefail
           VERSION="$(python -c 'import json; print(json.load(open("custom_components/medicine_cabinet/manifest.json"))["version"])')"
           TAG="v${VERSION}"
+
           if gh release view "$TAG" >/dev/null 2>&1; then
             echo "Release $TAG already exists"
             exit 0
           fi
+
+          awk -v version="$VERSION" '
+            $0 == "## " version { found=1; next }
+            found && /^## / { exit }
+            found { print }
+          ' CHANGELOG.md > /tmp/changelog-section.md
+
+          {
+            echo "## Medicine Cabinet $TAG"
+            echo
+            if [[ -s /tmp/changelog-section.md ]]; then
+              cat /tmp/changelog-section.md
+            else
+              echo "См. CHANGELOG.md для списка изменений."
+            fi
+            echo
+            echo "После установки/обновления полностью перезапустите Home Assistant."
+          } > /tmp/release-notes.md
+
           gh release create "$TAG" \
             --target "$TARGET_SHA" \
             --title "Medicine Cabinet $TAG" \
-            --notes-file - <<'EOF'
-          ## Medicine Cabinet v0.4.4
-
-          - Выпадающий список мест хранения и собственные места.
-          - Защита от повторного добавления одной упаковки по серийному номеру.
-          - Обновлённые brand-иконки и `mdi:pill-multiple` в боковой панели.
-          - Сохранены компактные карточки, `Правка`, защищённые `Списать` и `−1`.
-          - HACS-ready структура репозитория, HACS validation и Home Assistant hassfest.
-
-          После установки/обновления полностью перезапустите Home Assistant.
-          EOF
+            --notes-file /tmp/release-notes.md
