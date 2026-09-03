@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="custom_components/medicine_cabinet/brand/icon.png" alt="Medicine Cabinet" width="128">
+  <img src="https://cdn.jsdelivr.net/gh/asustek1978/Medicine-Cabinet@main/custom_components/medicine_cabinet/brand/icon.png" alt="Medicine Cabinet" width="128">
 </p>
 
 <h1 align="center">Medicine Cabinet / Домашняя аптечка</h1>
@@ -25,7 +25,7 @@
 ### Десктоп
 
 <p align="center">
-  <img src="images/desktop.jpg" alt="Medicine Cabinet desktop" width="100%">
+  <img src="https://cdn.jsdelivr.net/gh/asustek1978/Medicine-Cabinet@main/images/desktop.jpg" alt="Medicine Cabinet desktop" width="100%">
 </p>
 
 ## 🚀 Возможности
